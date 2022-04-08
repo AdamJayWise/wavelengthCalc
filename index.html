@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color : white;
+        }
+
+
+
+
+        .titleBox {
+            margin : 20px;
+        }
+
+        .labelledInput {
+            display : inline-block;
+            font-size:10pt;
+            margin: 5px;
+        }
+
+        .inputLabel {
+            margin-left : 5px;
+            margin-right: 12px;
+            margin-bottom : 2px;
+            font-size : 12px;
+
+        }
+
+        .textIn {
+            margin-left : 5px;
+            margin-bottom : 8px;
+            margin-right:3px;
+            border-width: 0px;
+            box-shadow: gray 0px 3px 5px;
+            text-align: right;
+            padding-right:3px;
+            width: 70px;
+        }
+
+        .labelledDivider {
+            font-size : 10pt;
+            margin: 8 4 4 4px;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class = titleBox>
+        Wavelength Calculator 0.01
+    </div>
+
+
+    <!--Here there will be a div with inputs used for calculating raman shift-->
+    <div class = calculator>
+        <div class = labelledInput>
+            <div class = inputLabel>Rayleigh Wavelength </div>
+            <input type = text class = "textIn" id = "rayleighWavelengthNm"></input> nm
+        </div>
+
+        <div class = labelledInput>
+            <div class = inputLabel>a Raman Shift of: </div>
+            <input type = text class = "textIn" id = "ramanShiftCm"></input> cm<sup>-1</sup>
+        </div>
+
+        <div class = labelledInput>
+            <div class = inputLabel>is at wavelength </div>
+            <input type = text class = "textIn" id = "ramanShiftNm" readonly = true></input> nm
+        </div>
+        
+
+        <div class = labelledDivider>
+            At a Rayleigh wavelength of <span id = "rayleighWavelengthDisplay">48888</span> nm...
+        </div>
+
+        <div class = labelledInput>
+            <div class = inputLabel>A resolution of </div>
+            <input type = text class = "textIn" id = "ramanResolutionCm"></input>cm<sup>-1</sup>
+        </div>
+
+        <div class = labelledInput>
+            <div class = inputLabel>is equivalent to </div>
+            <input type = text class = "textIn" id = "ramanResolutionNm"></input>nm
+        </div>
+
+        <div class = labelledDivider>
+            Spectrometers to consider for this measurement:
+        </div>
+
+        <div id = "spectrometerRecommendations">
+            <ul id = "spectrometers">
+            </ul>
+        </div>
+
+    </div>
+    
+</body>
+<script src = "js/d3.min.js"></script>
+<script src = "js/wavelengthCalc.js"></script>
+</htm>
