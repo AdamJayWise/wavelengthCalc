@@ -38,11 +38,11 @@ function r(n,d){
 
  // these are with a newton 940, very approx numbers
  var spectrometers = {
-    'Shamrock 163' : {300:0.12, 500:0.15, 750:0.23, 1000:0.52,},
-    'Kymera 193i': {300: 0.1 , 500:0.13, 750:0.19, 1000:0.43,},
-    'Kymera 328i' : {300: 0.05 , 500: 0.06, 750: 0.09, 1000:0.12,},
-    'Shamrock 500i' : {300: 0.03 , 500:0.03, 750:0.05, 1000:0.04,},
-    'Shamrock 750' : {300: 0.02 , 500: 0.02, 750: 0.04, 1000:0.05,},
+    '<a href = "https://andor.oxinst.com/products/kymera-and-shamrock-spectrographs/shamrock-163">Shamrock 163</a>' : {300:0.12, 500:0.15, 750:0.23, 1000:0.52,},
+    '<a href = "https://andor.oxinst.com/products/kymera-and-shamrock-spectrographs/kymera-193i">Kymera 193i</a>': {300: 0.1 , 500:0.13, 750:0.19, 1000:0.43,},
+    '<a href = "https://andor.oxinst.com/products/kymera-and-shamrock-spectrographs/kymera-328i">Kymera 328i</a>' : {300: 0.05 , 500: 0.06, 750: 0.09, 1000:0.12,},
+    '<a href = "https://andor.oxinst.com/products/kymera-and-shamrock-spectrographs/shamrock-500i">Shamrock 500i</a>' : {300: 0.03 , 500:0.03, 750:0.05, 1000:0.04,},
+    '<a href = "https://andor.oxinst.com/products/kymera-and-shamrock-spectrographs/shamrock-750">Shamrock 750</a>' : {300: 0.02 , 500: 0.02, 750: 0.04, 1000:0.05,},
 }
 
 function getRes(obj, lambda){
@@ -110,7 +110,7 @@ function updateText(){
     d3.select('#spectrometerRecommendations')
         .select('#spectrometers')
         .selectAll('li')
-        .data(app.acceptableSpectrometers).enter().append('li').text(s=>s.name)
+        .data(app.acceptableSpectrometers).enter().append('li').html(s=>s.name)
 }
 
 updateText();

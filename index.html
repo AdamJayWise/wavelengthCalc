@@ -1,11 +1,12 @@
 <html>
 
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color : white;
-        }
 
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
 
 
 
@@ -19,11 +20,15 @@
             margin: 5px;
         }
 
+        .calculator {
+            width : 50%;
+        }
+
         .inputLabel {
             margin-left : 5px;
             margin-right: 12px;
             margin-bottom : 2px;
-            font-size : 12px;
+            font-size : 12pt;
 
         }
 
@@ -31,17 +36,17 @@
             margin-left : 5px;
             margin-bottom : 8px;
             margin-right:3px;
-            border-width: 0px;
+            border-width: 1px;
             box-shadow: gray 0px 3px 5px;
             text-align: right;
             padding-right:3px;
-            width: 70px;
+            width: 100px;
         }
 
         .labelledDivider {
-            font-size : 10pt;
+            font-size : 12pt;
             margin: 8 4 4 4px;
-            font-style: italic;
+            border-top : 1px solid gray;
         }
 
     </style>
@@ -53,11 +58,10 @@
         Wavelength Calculator 0.01
     </div>
 
-
     <!--Here there will be a div with inputs used for calculating raman shift-->
     <div class = calculator>
         <div class = labelledInput>
-            <div class = inputLabel>Rayleigh Wavelength </div>
+            <div class = inputLabel>At Rayleigh Wavelength </div>
             <input type = text class = "textIn" id = "rayleighWavelengthNm"></input> nm
         </div>
 
@@ -93,6 +97,10 @@
         <div id = "spectrometerRecommendations">
             <ul id = "spectrometers">
             </ul>
+        </div>
+
+        <div>
+            See more at the <a href = "https://andor.oxinst.com/resolution-calculator">Resolution Calculator</a>
         </div>
 
     </div>
